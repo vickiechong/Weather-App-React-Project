@@ -22,6 +22,7 @@
 }
 .tempformat {
   color: grey;
+  text-decoration: none;
 }
 
 .tempformat:hover {
@@ -36,15 +37,4 @@
 
 .units .active:hover {
   text-decoration: none;
-}
-
-.todaystats {
-  font-style: italic;
-  font-size: 14px;
-}
-.weatherinfo {
-  list-style: none;
-  width: fit-content;
-  margin-right: 0;
-  margin-left: auto;
 }

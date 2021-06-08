@@ -1,6 +1,6 @@
 export default function Favebutton() {
   return (
-    <div className="favebutton col-2 text-right">
+    <div className="favebutton col-2 text-end">
       <button
         type="button"
         className="btn btn-secondary favebutton"

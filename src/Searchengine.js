@@ -11,7 +11,7 @@ export default function Searchengine() {
           autoFocus
           autoComplete="off"
         />
-        <button className="btn btn-primary ml-3" id="searchcountrybutton">
+        <button className="btn btn-primary ms-3" id="searchcountrybutton">
           <i className="fas fa-search"></i>
         </button>
       </form>

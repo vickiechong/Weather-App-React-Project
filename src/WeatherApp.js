@@ -7,15 +7,17 @@ import Favesection from "./Favesection";
 
 export default function WeatherApp() {
   return (
-    <div className="container WeatherApp">
-      <Searchtop />
-      <br />
-      <br />
-      <Maintemp />
-      <hr />
-      <Forecastsection />
-      <hr />
-      <Favesection />
+    <div className="WeatherApp">
+      <div className="container">
+        <Searchtop />
+        <br />
+        <br />
+        <Maintemp />
+        <hr />
+        <Forecastsection />
+        <hr />
+        <Favesection />
+      </div>
     </div>
   );
 }
