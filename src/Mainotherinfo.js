@@ -1,8 +1,7 @@
 import "./Mainotherinfo.css";
 
-export default function Mainotherinfo() {
+export default function Mainotherinfo(props) {
   let otherweatherData = {
-    humidity: "20",
     rainfall: "80",
   };
 
@@ -13,7 +12,7 @@ export default function Mainotherinfo() {
           <i className="fas fa-temperature-high"></i> Humidity :
           <span className="humidityvalue" id="currenthumidity">
             {" "}
-            {otherweatherData.humidity}%{" "}
+            {props.humidity}%{" "}
           </span>
         </li>
         <li className="todaystats rainfall">
