@@ -46,7 +46,7 @@ export default function Maintemp() {
               <div className="row">
                 <div className="col-4 d-flex align-items-center justify-content-center">
                   <img
-                    src="{weatherData.imgurl}"
+                    src={weatherData.imgurl}
                     alt=""
                     id="todayicon"
                     className="todayicon"
