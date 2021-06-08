@@ -7,7 +7,7 @@ function App() {
       <WeatherApp />
       <p className="opensourcestatement">
         <a
-          href="https://github.com/vickiechong/MyWeatherApp"
+          href="https://github.com/vickiechong/Weather-App-React-Project"
           target="_blank"
           rel="noreferrer"
           id="webpageaddress"
