@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import WeatherApp from "./WeatherApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className="WeatherAppWrapper">
+      <WeatherApp />
+      <p className="opensourcestatement">
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/vickiechong/MyWeatherApp"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
+          id="webpageaddress"
         >
-          Learn React
+          Open-source on Github
         </a>
-      </header>
+        , hosted on Netify and coded by Vickie Chong
+      </p>
     </div>
   );
 }

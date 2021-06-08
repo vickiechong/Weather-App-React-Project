@@ -1,0 +1,50 @@
+.todaycountryandtemp {
+  text-align: center;
+}
+.countrydisplay {
+  font-size: 68px;
+  font-weight: 600;
+}
+
+.todaydatemain {
+  font-size: 28px;
+  font-weight: 600;
+}
+.todayicon {
+  font-size: 80px;
+  width: 200px;
+}
+.todaytemp {
+  font-size: 150px;
+}
+.todayicontemp {
+  vertical-align: middle;
+}
+.tempformat {
+  color: grey;
+}
+
+.tempformat:hover {
+  text-decoration: none;
+}
+
+.units .active {
+  color: black;
+  cursor: default;
+  font-weight: 600;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+
+.todaystats {
+  font-style: italic;
+  font-size: 14px;
+}
+.weatherinfo {
+  list-style: none;
+  width: fit-content;
+  margin-right: 0;
+  margin-left: auto;
+}

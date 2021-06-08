@@ -1,0 +1,12 @@
+.favesection {
+  font-size: 20px;
+}
+
+.fave1icon {
+  display: inline;
+  width: 35px;
+}
+
+.fave1cityname {
+  text-transform: uppercase;
+}

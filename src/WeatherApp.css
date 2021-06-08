@@ -1,0 +1,16 @@
+.WeatherApp {
+  max-width: 600px;
+  background: linear-gradient(rgb(189 209 245 / 23%), #fddadd38);
+  border: solid 2px lightgrey;
+  border-radius: 25px;
+  padding: 25px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", sans-serif;
+}
