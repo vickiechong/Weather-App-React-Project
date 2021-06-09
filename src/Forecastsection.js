@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./Forecastsection.css";
 
 export default function Forecastsection() {

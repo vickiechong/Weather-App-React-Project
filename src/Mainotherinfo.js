@@ -1,3 +1,4 @@
+import React from "react";
 import "./Mainotherinfo.css";
 
 export default function Mainotherinfo(props) {

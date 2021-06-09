@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Locationbutton() {
   return (
     <div className="Locationbutton col-2 text-start">

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Favebutton() {
   return (
     <div className="favebutton col-2 text-end">

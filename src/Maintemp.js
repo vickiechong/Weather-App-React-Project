@@ -1,7 +1,10 @@
-import Mainotherinfo from "./Mainotherinfo";
-import "./Maintemp.css";
 import axios from "axios";
 import React, { useState } from "react";
+
+import Mainotherinfo from "./Mainotherinfo";
+import FormatDate from "./FormatDate";
+
+import "./Maintemp.css";
 
 export default function Maintemp() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,9 +16,6 @@ export default function Maintemp() {
       ready: true,
       currenttemp: Math.round(response.data.main.temp),
       city: response.data.name,
-      day: "5",
-      month: "4",
-      time: "12:00",
       imgurl: "http://openweathermap.org/img/wn/10d@2x.png",
       humidity: response.data.main.humidity,
       rainfall: "30",
@@ -30,23 +30,7 @@ export default function Maintemp() {
             {weatherData.city}
           </h1>
           <h2 className="todaydatemain">
-            <div className="row justify-content-center">
-              <div className="todaymain">
-                Today
-                <span className="datemain" id="currentdate">
-                  {" "}
-                  {weatherData.day}{" "}
-                </span>
-                /
-                <span className="monthmain" id="currentmonth">
-                  {" "}
-                  {weatherData.month}{" "}
-                </span>
-              </div>
-            </div>
-            <div className="timemain" id="currenttime">
-              {weatherData.time}
-            </div>
+            <FormatDate />
             <br />
           </h2>
           <h3 className="todaytempmain">

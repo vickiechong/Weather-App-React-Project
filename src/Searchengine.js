@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Searchengine() {
   return (
     <div className="searchengine col-6">

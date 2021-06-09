@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./Favesection.css";
 
 export default function Favesection() {
