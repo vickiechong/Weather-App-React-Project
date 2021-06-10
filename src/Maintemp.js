@@ -38,7 +38,7 @@ export default function Maintemp(props) {
     searchcity();
   }
 
-  function serachcityinputchange(event) {
+  function searchcityinputchange(event) {
     setCity(event.target.value);
   }
 
