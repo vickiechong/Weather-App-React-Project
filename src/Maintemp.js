@@ -6,8 +6,9 @@ import FormatDate from "./FormatDate";
 
 import "./Maintemp.css";
 
-export default function Maintemp() {
+export default function Maintemp(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultcity);
 
   function showtemp(response) {
     console.log(response.data);
@@ -20,6 +21,25 @@ export default function Maintemp() {
       humidity: response.data.main.humidity,
       rainfall: "30",
     });
+  }
+
+  function searchcity() {
+    let apikey = `404ebbfe1292f8e13a6dd9e110c25a01`;
+    let apiendpoint = `https://api.openweathermap.org/data/2.5/weather?`;
+    let city = `${city}`;
+    let units = `metric`;
+    let apiurl = `${apiendpoint}q=${city}&appid=${apikey}&units=${units}`;
+
+    axios.get(apiurl).then(showtemp);
+  }
+
+  function searchcitysubmit(event) {
+    event.preventDefault();
+    searchcity();
+  }
+
+  function serachcityinputchange(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -81,13 +101,7 @@ export default function Maintemp() {
       </div>
     );
   } else {
-    let apikey = `404ebbfe1292f8e13a6dd9e110c25a01`;
-    let apiendpoint = `https://api.openweathermap.org/data/2.5/weather?`;
-    let city = `Seoul`;
-    let units = `metric`;
-    let apiurl = `${apiendpoint}q=${city}&appid=${apikey}&units=${units}`;
-
-    axios.get(apiurl).then(showtemp);
+    searchcity();
 
     return "Loading temperature..";
   }
