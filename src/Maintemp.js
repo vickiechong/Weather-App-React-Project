@@ -1,11 +1,12 @@
-import axios from "axios";
 import React, { useState } from "react";
+import axios from "axios";
 
 import Favebutton from "./Favebutton";
 import Locationbutton from "./Locationbutton";
 import FormatDate from "./FormatDate";
 import TempandUnits from "./TempandUnits";
 import Mainotherinfo from "./Mainotherinfo";
+import Forecastsection from "./Forecastsection";
 
 import "./Maintemp.css";
 
@@ -18,10 +19,11 @@ export default function Maintemp(props) {
 
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       currenttemp: Math.round(response.data.main.temp),
       city: response.data.name,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      desccription: response.data.weather[0].description,
+      description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       rainfall: "30",
     });
@@ -112,6 +114,9 @@ export default function Maintemp(props) {
           </h3>
         </div>
         <Mainotherinfo humidity={weatherData.humidity} />
+        <hr />
+        <Forecastsection coord={weatherData.coord} />
+        <hr />
       </div>
     );
   } else {
