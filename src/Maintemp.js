@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import Favebutton from "./Favebutton";
-import Locationbutton from "./Locationbutton";
 import FormatDate from "./FormatDate";
 import TempandUnits from "./TempandUnits";
 import Mainotherinfo from "./Mainotherinfo";
@@ -25,7 +24,6 @@ export default function Maintemp(props) {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      rainfall: "30",
     });
   }
 
@@ -45,6 +43,20 @@ export default function Maintemp(props) {
 
   function searchcityinputchange(event) {
     setCity(event.target.value);
+  }
+
+  function searchgeolocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showposition);
+  }
+
+  function showposition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apikey = `404ebbfe1292f8e13a6dd9e110c25a01`;
+    let units = `metric`;
+    let apiurl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}&units=${units}`;
+    axios.get(apiurl).then(showtemp);
   }
 
   if (weatherData.ready) {
@@ -77,7 +89,18 @@ export default function Maintemp(props) {
                 </button>
               </form>
             </div>
-            <Locationbutton />
+            <div className="Locationbutton col-2 text-start">
+              <span>
+                <button
+                  className="btn btn-primary"
+                  id="locationbutton"
+                  type="submit"
+                  onClick={searchgeolocation}
+                >
+                  <i className="fas fa-map-marked-alt"></i>
+                </button>
+              </span>
+            </div>
           </div>
         </div>
         <br />
