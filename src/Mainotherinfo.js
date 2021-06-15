@@ -1,11 +1,9 @@
 import React from "react";
+
 import "./Mainotherinfo.css";
+import Todayrainfall from "./Todayrainfall";
 
 export default function Mainotherinfo(props) {
-  let otherweatherData = {
-    rainfall: "80",
-  };
-
   return (
     <div className="Mainotherinfo">
       <ul className="weatherinfo">
@@ -16,12 +14,7 @@ export default function Mainotherinfo(props) {
             {props.humidity}%{" "}
           </span>
         </li>
-        <li className="todaystats rainfall">
-          <i className="fas fa-tint"></i> Rainfall % :
-          <span className="rainfallvalue" id="currentrainfall">
-            {otherweatherData.rainfall}%
-          </span>
-        </li>
+        <Todayrainfall coord={props.coord} />
       </ul>
     </div>
   );

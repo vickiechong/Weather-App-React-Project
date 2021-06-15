@@ -113,7 +113,10 @@ export default function Maintemp(props) {
             </div>
           </h3>
         </div>
-        <Mainotherinfo humidity={weatherData.humidity} />
+        <Mainotherinfo
+          humidity={weatherData.humidity}
+          coord={weatherData.coord}
+        />
         <hr />
         <Forecastsection coord={weatherData.coord} />
         <hr />
