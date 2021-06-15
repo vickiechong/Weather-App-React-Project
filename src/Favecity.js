@@ -15,13 +15,13 @@ export default function Favecity(props) {
 
   if (loaded) {
     return (
-      <div class="col-3 text-center">
-        <p class="fave1cityname" id="fave1city">
+      <div className="col-3 text-center">
+        <p className="fave1cityname" id="fave1city">
           {favedata.name}
         </p>
-        <div class="fave1">
+        <div className="fave1">
           <Faveicon icon={favedata.weather[0].icon} />
-          <span class="fave1temp" id="favecitytemp">
+          <span className="fave1temp" id="favecitytemp">
             {Math.round(favedata.main.temp)}
           </span>
           °
