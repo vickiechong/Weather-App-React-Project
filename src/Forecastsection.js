@@ -52,15 +52,15 @@ export default function Forecastsection(props) {
                   </span>
                   °
                 </div>
-                <div className="col text-start futurestats">
-                  <div className="row T+1 humidity">
+                <div className="col text-start me-4 futurestats">
+                  <div className="d-flex flex-row T+1 humidity">
                     <i className="p-0 fas fa-temperature-high humidityicon"></i>
                     <span className="p-0 humidityvalue">
                       {" "}
                       {Math.round(forecastdata.humidity)}%{" "}
                     </span>
                   </div>
-                  <div className="row T+1 rainfall">
+                  <div className="d-flex flex-row T+1 rainfall">
                     <i className="p-0 fas fa-tint"></i>
                     <span className="p-0 rainfallvalue">
                       {" "}
