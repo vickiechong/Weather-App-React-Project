@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Favebutton from "./Favebutton";
 import FormatDate from "./FormatDate";
 import TempandUnits from "./TempandUnits";
 import Mainotherinfo from "./Mainotherinfo";
@@ -64,7 +63,7 @@ export default function Maintemp(props) {
       <div className="Maintemp">
         <div className="Searchtoprow">
           <div className="row justify-content-center searchrow">
-            <Favebutton />
+            <div className="favebutton col-2 text-end"></div>
             <div className="searchengine col-6">
               <form
                 onSubmit={searchcitysubmit}
