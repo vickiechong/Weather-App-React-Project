@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Faveicon from "./Faveicon";
+import Weathericon from "./Weathericon";
 
 export default function Favecity(props) {
   const [loaded, setLoaded] = useState(false);
@@ -19,8 +19,8 @@ export default function Favecity(props) {
         <p className="fave1cityname" id="fave1city">
           {favedata.name}
         </p>
-        <div className="fave1">
-          <Faveicon icon={favedata.weather[0].icon} />
+        <div className=" d-flex align-items-center justify-content-center fave1">
+          <Weathericon icon={favedata.weather[0].icon} width={35} />
           <span className="fave1temp" id="favecitytemp">
             {Math.round(favedata.main.temp)}
           </span>

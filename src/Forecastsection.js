@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./Forecastsection.css";
-import Forecasticon from "./Forecasticon";
+import Weathericon from "./Weathericon";
 
 export default function Forecastsection(props) {
   const [loaded, setLoaded] = useState(false);
@@ -33,10 +33,12 @@ export default function Forecastsection(props) {
           if (index > 0 && index < 6) {
             return (
               <div
-                className="row align-items-center text-center mt-3 futuredays T+1"
+                className="row align-items-center text-center mt-2 futuredays T+1"
                 key={index}
               >
-                <Forecasticon icon={forecastdata.weather[0].icon} />
+                <div className="col forecasticon">
+                  <Weathericon icon={forecastdata.weather[0].icon} width={35} />
+                </div>
                 <div className="col futuredate">
                   {formatday(forecastdata.dt)}
                 </div>

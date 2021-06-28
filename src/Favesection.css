@@ -9,4 +9,9 @@
 
 .fave1cityname {
   text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.faveheader {
+  font-size: 20px;
 }

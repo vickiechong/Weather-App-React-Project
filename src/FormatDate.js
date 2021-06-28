@@ -18,20 +18,18 @@ export default function FormatDate() {
   }
   return (
     <div className="FormatDateCurrentTime row justify-content-center">
-      <div className="row justify-content-center">
-        <div className="todaymain">Today</div>
-        <div>
-          <span className="datemain" id="currentdate">
-            {date}{" "}
-          </span>
-          /
-          <span className="monthmain" id="currentmonth">
-            {" "}
-            {month}
-          </span>
-        </div>
+      <div className="todaymain">
+        <span className="me-2">Today</span>{" "}
+        <span className="datemain" id="currentdate">
+          {date}{" "}
+        </span>
+        /
+        <span className="monthmain" id="currentmonth">
+          {" "}
+          {month}
+        </span>
       </div>
-      <div className="timemain" id="currenttime">
+      <div className="mt-1 timemain" id="currenttime">
         {hours}:{minutes}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import FormatDate from "./FormatDate";
+import Weathericon from "./Weathericon";
 import TempandUnits from "./TempandUnits";
 import Mainotherinfo from "./Mainotherinfo";
 import Forecastsection from "./Forecastsection";
@@ -20,7 +21,7 @@ export default function Maintemp(props) {
       coord: response.data.coord,
       currenttemp: Math.round(response.data.main.temp),
       city: response.data.name,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
     });
@@ -102,7 +103,7 @@ export default function Maintemp(props) {
             </div>
           </div>
         </div>
-        <br />
+
         <br />
         <div className="todaycountryandtemp">
           <h1 className="countrydisplay" id="displaysearchcountry">
@@ -110,19 +111,16 @@ export default function Maintemp(props) {
           </h1>
           <h2 className="todaydatemain">
             <FormatDate />
-            <br />
           </h2>
-          <h3 className="todaytempmain">
+          <h3 className="mb-0 todaytempmain">
             <div className="row todaytempall">
               <div className="col">
                 <div className="row">
                   <div className="col-4 d-flex align-items-center justify-content-center">
-                    <img
-                      src={weatherData.icon}
-                      alt=""
-                      id="todayicon"
-                      className="todayicon"
-                      width=""
+                    <Weathericon
+                      icon={weatherData.icon}
+                      description={weatherData.description}
+                      width={150}
                     />
                   </div>
                   <div className="col-8 ">

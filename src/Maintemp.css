@@ -9,17 +9,15 @@
 .todaydatemain {
   font-size: 28px;
   font-weight: 600;
+  margin-bottom: 15px;
 }
 .todayicon {
-  font-size: 80px;
-  width: 200px;
-}
-.todaytemp {
-  font-size: 150px;
-}
-.todayicontemp {
   vertical-align: middle;
 }
+.todaytemp {
+  font-size: 125px;
+}
+
 .tempformat {
   color: grey;
   text-decoration: none;
