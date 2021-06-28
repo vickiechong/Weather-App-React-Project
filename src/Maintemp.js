@@ -89,11 +89,10 @@ export default function Maintemp(props) {
                 </button>
               </form>
             </div>
-            <div className="Locationbutton col-2 text-start">
+            <div className="Locationbar col-2 text-start">
               <span>
                 <button
-                  className="btn btn-primary"
-                  id="locationbutton"
+                  className="btn btn-primary geolocationbutton"
                   type="submit"
                   onClick={searchgeolocation}
                 >

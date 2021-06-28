@@ -36,3 +36,13 @@
 .units .active:hover {
   text-decoration: none;
 }
+
+.geolocationbuttion {
+  background: #cccaca;
+  border: none;
+}
+
+#searchcountrybutton {
+  background: #aed1ded4;
+  border: none;
+}

@@ -1,11 +1,12 @@
 .WeatherApp {
   max-width: 600px;
-  background: linear-gradient(rgb(189 209 245 / 23%), #fddadd38);
-  border: solid 2px lightgrey;
+  background: linear-gradient(rgb(189 209 245 / 28%), #ffdcdf26);
+  border: solid 1px #f2f2f1;
   border-radius: 25px;
   padding: 25px;
   margin: 10px auto;
   padding-bottom: 10px;
+  box-shadow: 2px 2px 9px #e6e6e6;
 }
 
 h1,

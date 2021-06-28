@@ -7,7 +7,7 @@ export default function Favesection() {
   return (
     <div className="Favesection">
       <h4 className="faveheader">
-        <i className="fas fa-heart"></i>{" "}
+        <i className="fas fa-heart favehearticon"></i>{" "}
         <span>
           <strong>PLACES</strong>
         </span>
