@@ -8,7 +8,6 @@ export default function Weathericon(props) {
       className=" Weathericon"
       src={animatedicon}
       alt={props.description}
-      id="todayicon"
       className="todayicon"
       width={props.width}
     />
