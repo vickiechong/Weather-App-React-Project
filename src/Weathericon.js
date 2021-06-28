@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Weathericon(props) {
-  let animatedicon = `http://openweathermap.org/img/wn/${props.icon}@2x.png`;
+  let animatedicon = `media/${props.icon}.svg`;
 
   return (
     <img
