@@ -3,11 +3,10 @@
   margin: 10px auto;
 }
 
-.opensourcestatement,
-.iconstatement {
+.creditsstatement {
   text-align: center;
   font-size: 11px;
-  margin-bottom: 2px;
+  margin: 15px auto;
 }
 
 .creditsgithub {
@@ -18,4 +17,8 @@
 .codercredits {
   color: #5791a8;
   font-weight: 500;
+}
+
+.coderrow {
+  margin-bottom: 3px;
 }
