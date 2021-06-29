@@ -12,7 +12,7 @@ export default function Favesection() {
           <strong>PLACES</strong>
         </span>
       </h4>
-      <div className="container favesection">
+      <div className="container favecitysection">
         <div
           className="row pt-2 justify-content-center favecity"
           id="faveblock"

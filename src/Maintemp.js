@@ -62,49 +62,48 @@ export default function Maintemp(props) {
   if (weatherData.ready) {
     return (
       <div className="Maintemp">
-        <div className="Searchtoprow">
-          <div className="row justify-content-center searchrow">
-            <div className="favebutton col-2 text-end"></div>
-            <div className="searchengine col-6">
-              <form
-                onSubmit={searchcitysubmit}
-                className="d-flex"
-                id="searchcountrybar"
+        <div className="row justify-content-center Searchtoprow">
+          <div className="col-2 text-end"></div>
+          <div className="col-6 searchengine">
+            <form
+              onSubmit={searchcitysubmit}
+              className="d-flex"
+              id="searchcountrybar"
+            >
+              <input
+                type="text"
+                className="form-control"
+                id="searchcountryinput"
+                placeholder="Country or City"
+                required
+                autoFocus="on"
+                autoComplete="off"
+                onChange={searchcityinputchange}
+              />
+              <button
+                className="btn btn-primary ms-3 "
+                id="searchcountrybutton"
               >
-                <input
-                  type="text"
-                  className="form-control"
-                  id="searchcountryinput"
-                  placeholder="Country or City"
-                  required
-                  autoFocus="on"
-                  autoComplete="off"
-                  onChange={searchcityinputchange}
-                />
-                <button
-                  className="btn btn-primary ms-3"
-                  id="searchcountrybutton"
-                >
-                  <i className="fas fa-search"></i>
-                </button>
-              </form>
-            </div>
-            <div className="Locationbar col-2 text-start">
-              <span>
-                <button
-                  className="btn btn-primary geolocationbutton"
-                  type="submit"
-                  onClick={searchgeolocation}
-                >
-                  <i className="fas fa-map-marked-alt"></i>
-                </button>
-              </span>
-            </div>
+                <i className="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div className="col-2 text-start locationbutton ">
+            <span>
+              <button
+                className="btn btn-primary "
+                type="submit"
+                onClick={searchgeolocation}
+                id="geolocationbutton"
+              >
+                <i className="fas fa-map-marked-alt"></i>
+              </button>
+            </span>
           </div>
         </div>
 
         <br />
-        <div className="todaycountryandtemp">
+        <div className="todayblock">
           <h1 className="countrydisplay" id="displaysearchcountry">
             {weatherData.city}
           </h1>
@@ -112,22 +111,16 @@ export default function Maintemp(props) {
             <FormatDate />
           </h2>
           <h3 className="mb-0 todaytempmain">
-            <div className="row todaytempall">
-              <div className="col">
-                <div className="row">
-                  <div className="col-4 d-flex align-items-center justify-content-center">
-                    <Weathericon
-                      icon={weatherData.icon}
-                      description={weatherData.description}
-                      width={150}
-                    />
-                  </div>
-                  <div className="col-8 ">
-                    <TempandUnits
-                      celsiustempcurrent={weatherData.currenttemp}
-                    />
-                  </div>
-                </div>
+            <div className="row">
+              <div className="col-4 d-flex align-items-center justify-content-center">
+                <Weathericon
+                  icon={weatherData.icon}
+                  description={weatherData.description}
+                  width={150}
+                />
+              </div>
+              <div className="col-8 ">
+                <TempandUnits celsiustempcurrent={weatherData.currenttemp} />
               </div>
             </div>
           </h3>

@@ -1,16 +1,11 @@
 .futuredays {
   font-size: 18px;
 }
-.futurestats {
-  font-size: 10px;
-}
-.futuredaysblock {
-  max-width: 600px;
-}
+
 .tempmin {
   margin-right: 30px;
 }
 
-.forecasticon {
-  width: 35px;
+.futurestats {
+  font-size: 10px;
 }

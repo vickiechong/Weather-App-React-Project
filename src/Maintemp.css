@@ -1,4 +1,4 @@
-.todaycountryandtemp {
+.todayblock {
   text-align: center;
 }
 .countrydisplay {
@@ -11,9 +11,17 @@
   font-weight: 600;
   margin-bottom: 15px;
 }
-.todayicon {
-  vertical-align: middle;
+
+#geolocationbutton {
+  background: #cccaca;
+  border: none;
 }
+
+#searchcountrybutton {
+  background: #aed1ded4;
+  border: none;
+}
+
 .todaytemp {
   font-size: 125px;
 }
@@ -35,14 +43,4 @@
 
 .units .active:hover {
   text-decoration: none;
-}
-
-.geolocationbutton {
-  background: #cccaca;
-  border: none;
-}
-
-#searchcountrybutton {
-  background: #aed1ded4;
-  border: none;
 }

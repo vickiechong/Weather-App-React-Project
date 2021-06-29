@@ -18,7 +18,7 @@ export default function Todayrainfall(props) {
   if (loaded) {
     return (
       <div>
-        <li className="todaystats rainfall">
+        <li className="todaystats">
           <i className="fas fa-tint"></i> Rainfall % :
           <span className="rainfallvalue" id="currentrainfall">
             {rainfallprob}%

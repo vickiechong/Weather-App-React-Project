@@ -7,7 +7,7 @@ export default function Mainotherinfo(props) {
   return (
     <div className="Mainotherinfo">
       <ul className="weatherinfo">
-        <li className="todaystats humidity">
+        <li className="todaystats">
           <i className="fas fa-temperature-high"></i> Humidity :
           <span className="humidityvalue" id="currenthumidity">
             {" "}

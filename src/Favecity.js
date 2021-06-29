@@ -16,12 +16,12 @@ export default function Favecity(props) {
   if (loaded) {
     return (
       <div className="col-3 text-center">
-        <p className="fave1cityname" id="fave1city">
+        <p className="favecity" id="favecity">
           {favedata.name}
         </p>
-        <div className=" d-flex align-items-center justify-content-center fave1">
+        <div className=" d-flex align-items-center justify-content-center">
           <Weathericon icon={favedata.weather[0].icon} width={35} />
-          <span className="fave1temp" id="favecitytemp">
+          <span className="favetemp" id="favecitytemp">
             {Math.round(favedata.main.temp)}
           </span>
           °

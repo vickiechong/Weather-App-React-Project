@@ -5,7 +5,7 @@ export default function Weathericon(props) {
 
   return (
     <img
-      className=" Weathericon todayicon"
+      className=" weathericon"
       src={animatedicon}
       alt={props.description}
       width={props.width}

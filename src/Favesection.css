@@ -1,21 +1,17 @@
-.favesection {
-  font-size: 20px;
+.faveheader {
+  font-size: 22px;
 }
 
 .favehearticon {
   color: #989393;
 }
 
-.fave1icon {
-  display: inline;
-  width: 35px;
-}
-
-.fave1cityname {
+.favecity {
+  font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
 
-.faveheader {
-  font-size: 20px;
+.favetemp {
+  padding: 0px 2px 0px 5px;
 }

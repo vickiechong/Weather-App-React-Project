@@ -17,19 +17,19 @@ export default function FormatDate() {
     minutes = `0${minutes}`;
   }
   return (
-    <div className="FormatDateCurrentTime row justify-content-center">
-      <div className="todaymain">
+    <div className="FormatDate">
+      <div>
         <span className="me-2">Today</span>{" "}
-        <span className="datemain" id="currentdate">
+        <span className="" id="currentdate">
           {date}{" "}
         </span>
         /
-        <span className="monthmain" id="currentmonth">
+        <span className="" id="currentmonth">
           {" "}
           {month}
         </span>
       </div>
-      <div className="mt-1 timemain" id="currenttime">
+      <div className="mt-2" id="currenttime">
         {hours}:{minutes}
       </div>
     </div>

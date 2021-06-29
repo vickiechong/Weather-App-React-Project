@@ -28,20 +28,18 @@ export default function Forecastsection(props) {
 
   if (loaded) {
     return (
-      <div className="Forecast section">
+      <div className="Forecastsection">
         {forecastDay.map((forecastdata, index) => {
           if (index > 0 && index < 6) {
             return (
               <div
-                className="row align-items-center text-center mt-2 futuredays T+1"
+                className="row align-items-center text-center mt-2 futuredays"
                 key={index}
               >
-                <div className="col forecasticon">
+                <div className="col">
                   <Weathericon icon={forecastdata.weather[0].icon} width={35} />
                 </div>
-                <div className="col futuredate">
-                  {formatday(forecastdata.dt)}
-                </div>
+                <div className="col">{formatday(forecastdata.dt)}</div>
                 <div className="col tempmax">
                   <span id="forecasttempmax">
                     {Math.round(forecastdata.temp.max)}
@@ -55,14 +53,14 @@ export default function Forecastsection(props) {
                   °
                 </div>
                 <div className="col text-start me-4 futurestats">
-                  <div className="d-flex flex-row T+1 humidity">
+                  <div className="d-flex flex-row humidity">
                     <i className="p-0 fas fa-temperature-high humidityicon"></i>
                     <span className="p-0 humidityvalue">
                       {" "}
                       {Math.round(forecastdata.humidity)}%{" "}
                     </span>
                   </div>
-                  <div className="d-flex flex-row T+1 rainfall">
+                  <div className="d-flex flex-row rainfall">
                     <i className="p-0 fas fa-tint"></i>
                     <span className="p-0 rainfallvalue">
                       {" "}

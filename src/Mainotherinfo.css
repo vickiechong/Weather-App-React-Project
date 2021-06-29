@@ -1,12 +1,13 @@
-.todaystats {
-  font-style: italic;
-  font-size: 12px;
-}
 .weatherinfo {
   list-style: none;
   width: fit-content;
   margin-right: 0;
   margin-left: auto;
+}
+
+.todaystats {
+  font-style: italic;
+  font-size: 12px;
 }
 
 .humidityvalue {
