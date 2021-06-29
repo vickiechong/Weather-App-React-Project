@@ -3,7 +3,19 @@
   margin: 0 auto;
 }
 
-.opensourcestatement {
+.opensourcestatement,
+.iconstatement {
   text-align: center;
   font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.creditsgithub {
+  text-decoration: none;
+  color: black;
+}
+
+.codercredits {
+  color: #5791a8;
+  font-weight: 500;
 }
