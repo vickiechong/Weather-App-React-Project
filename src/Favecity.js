@@ -27,9 +27,9 @@ export default function Favecity(props) {
   if (loaded) {
     return (
       <div className="col-4 text-center favecityblock">
-        <p className="favecity" id="favecity">
+        <div className="favecity" id="favecity">
           {favedata.name}
-        </p>
+        </div>
         <div className=" d-flex align-items-center justify-content-center">
           <Weathericon icon={favedata.weather[0].icon} width={35} />
           <span className="favetemp" id="favecitytemp">

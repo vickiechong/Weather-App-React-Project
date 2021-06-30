@@ -7,6 +7,8 @@ export default function FormatDate() {
   let date = nowtime.getDate();
   let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
   let month = months[nowtime.getMonth()];
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let day = days[nowtime.getDay()];
 
   let hours = nowtime.getHours();
   if (hours < 10) {
@@ -19,7 +21,7 @@ export default function FormatDate() {
   return (
     <div className="FormatDate">
       <div>
-        <span className="me-2">Today</span>{" "}
+        <span className="me-2">{day}</span>{" "}
         <span className="" id="currentdate">
           {date}{" "}
         </span>

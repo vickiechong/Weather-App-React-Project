@@ -6,12 +6,9 @@ import Favecity from "./Favecity";
 export default function Favesection(props) {
   return (
     <div className="Favesection">
-      <h4 className="faveheader">
-        <i className="fas fa-heart favehearticon"></i>{" "}
-        <span>
-          <strong>PLACES</strong>
-        </span>
-      </h4>
+      <div className="faveheader">
+        <i className="fas fa-heart favehearticon"></i> <span>PLACES</span>
+      </div>
       <div className="container favecitysection">
         <div
           className="row pt-2 justify-content-center favecity"

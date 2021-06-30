@@ -103,13 +103,13 @@ export default function Maintemp(props) {
         </div>
 
         <div className="todayblock">
-          <h1 className="countrydisplay" id="displaysearchcountry">
+          <div className="countrydisplay" id="displaysearchcountry">
             {weatherData.city}
-          </h1>
-          <h2 className="todaydatemain">
+          </div>
+          <div className="todaydatemain">
             <FormatDate />
-          </h2>
-          <h3 className="mb-0 todaytempmain">
+          </div>
+          <div className="mb-0 todaytempmain">
             <div className="row">
               <div className="col-4 d-flex align-items-center justify-content-center">
                 <Weathericon
@@ -126,7 +126,7 @@ export default function Maintemp(props) {
                 />
               </div>
             </div>
-          </h3>
+          </div>
         </div>
         <Mainotherinfo
           humidity={weatherData.humidity}

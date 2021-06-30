@@ -18,10 +18,11 @@ export default function TempandUnits(props) {
   if (props.unit === "setcelsius") {
     return (
       <div className="row">
-        <div className="col-6 d-flex justify-content-center">
-          <span className="todaytemp" id="currenttemp">
-            {Math.round(props.celsiustempcurrent)}
-          </span>
+        <div
+          className="col-6 d-flex justify-content-center todaytemp"
+          id="currenttemp"
+        >
+          {Math.round(props.celsiustempcurrent)}
         </div>
         <div className="col-6 d-flex">
           <span className="units">
