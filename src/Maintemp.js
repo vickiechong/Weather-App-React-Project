@@ -63,8 +63,8 @@ export default function Maintemp(props) {
     return (
       <div className="Maintemp">
         <div className="row justify-content-center Searchtoprow">
-          <div className="col-2 text-end"></div>
-          <div className="col-6 searchengine">
+          <div className=" text-end"></div>
+          <div className="col-7 searchengine">
             <form
               onSubmit={searchcitysubmit}
               className="d-flex"
@@ -74,7 +74,7 @@ export default function Maintemp(props) {
                 type="text"
                 className="form-control"
                 id="searchcountryinput"
-                placeholder="Country or City"
+                placeholder="City"
                 required
                 autoFocus="on"
                 autoComplete="off"
@@ -88,7 +88,7 @@ export default function Maintemp(props) {
               </button>
             </form>
           </div>
-          <div className="col-2 text-start locationbutton ">
+          <div className="col-1 text-start locationbutton ">
             <span>
               <button
                 className="btn btn-primary "
@@ -102,7 +102,6 @@ export default function Maintemp(props) {
           </div>
         </div>
 
-        <br />
         <div className="todayblock">
           <h1 className="countrydisplay" id="displaysearchcountry">
             {weatherData.city}

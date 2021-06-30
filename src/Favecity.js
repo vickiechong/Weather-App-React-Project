@@ -26,7 +26,7 @@ export default function Favecity(props) {
 
   if (loaded) {
     return (
-      <div className="col-3 text-center">
+      <div className="col-4 text-center">
         <p className="favecity" id="favecity">
           {favedata.name}
         </p>
