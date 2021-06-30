@@ -3,7 +3,7 @@ import React from "react";
 import "./Favesection.css";
 import Favecity from "./Favecity";
 
-export default function Favesection() {
+export default function Favesection(props) {
   return (
     <div className="Favesection">
       <h4 className="faveheader">
@@ -17,9 +17,9 @@ export default function Favesection() {
           className="row pt-2 justify-content-center favecity"
           id="faveblock"
         >
-          <Favecity city="Singapore" />
-          <Favecity city="London" />
-          <Favecity city="New York" />
+          <Favecity city="Singapore" unit={props.unit} />
+          <Favecity city="London" unit={props.unit} />
+          <Favecity city="New York" unit={props.unit} />
         </div>
       </div>
     </div>

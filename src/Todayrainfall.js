@@ -10,7 +10,7 @@ export default function Todayrainfall(props) {
   }, [props.coord]);
 
   function displayrainfall(response) {
-    console.log(response.data.daily);
+    // console.log(response.data.daily);
     setRainfallprob(response.data.daily[0].pop * 100);
     setLoaded(true);
   }

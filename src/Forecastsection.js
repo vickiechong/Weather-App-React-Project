@@ -13,7 +13,7 @@ export default function Forecastsection(props) {
   }, [props.coord]);
 
   function displayforecast(response) {
-    console.log(response.data.daily);
+    // console.log(response.data.daily);
     setforecastDay(response.data.daily);
     setLoaded(true);
   }
@@ -24,6 +24,28 @@ export default function Forecastsection(props) {
     let day = date.getDay();
 
     return days[day];
+  }
+
+  function forecasttempmax(max) {
+    let temperatureCelsius = Math.round(max);
+    let temperatureFahrenheit = Math.round((max * 9) / 5 + 32);
+
+    if (props.unit === "setcelsius") {
+      return `${temperatureCelsius}`;
+    } else {
+      return `${temperatureFahrenheit}`;
+    }
+  }
+
+  function forecasttempmin(min) {
+    let temperatureCelsius = Math.round(min);
+    let temperatureFahrenheit = Math.round((min * 9) / 5 + 32);
+
+    if (props.unit === "setcelsius") {
+      return `${temperatureCelsius}`;
+    } else {
+      return `${temperatureFahrenheit}`;
+    }
   }
 
   if (loaded) {
@@ -42,13 +64,13 @@ export default function Forecastsection(props) {
                 <div className="col">{formatday(forecastdata.dt)}</div>
                 <div className="col tempmax">
                   <span id="forecasttempmax">
-                    {Math.round(forecastdata.temp.max)}
+                    {forecasttempmax(forecastdata.temp.max)}
                   </span>
                   °
                 </div>
                 <div className="col tempmin">
                   <span id="forecasttempmin">
-                    {Math.round(forecastdata.temp.min)}
+                    {forecasttempmin(forecastdata.temp.min)}
                   </span>
                   °
                 </div>

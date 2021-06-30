@@ -8,9 +8,20 @@ export default function Favecity(props) {
   const [favedata, setFavedata] = useState(null);
 
   function displayfavetemp(response) {
-    console.log(response.data);
+    // console.log(response.data);
     setFavedata(response.data);
     setLoaded(true);
+  }
+
+  function temperature() {
+    let temperatureCelsius = Math.round(favedata.main.temp);
+    let temperatureFahrenheit = Math.round((favedata.main.temp * 9) / 5 + 32);
+
+    if (props.unit === "setcelsius") {
+      return `${temperatureCelsius}`;
+    } else {
+      return `${temperatureFahrenheit}`;
+    }
   }
 
   if (loaded) {
@@ -22,7 +33,7 @@ export default function Favecity(props) {
         <div className=" d-flex align-items-center justify-content-center">
           <Weathericon icon={favedata.weather[0].icon} width={35} />
           <span className="favetemp" id="favecitytemp">
-            {Math.round(favedata.main.temp)}
+            {temperature()}
           </span>
           °
         </div>

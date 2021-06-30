@@ -19,7 +19,7 @@ export default function Maintemp(props) {
     setWeatherData({
       ready: true,
       coord: response.data.coord,
-      currenttemp: Math.round(response.data.main.temp),
+      currenttemp: response.data.main.temp,
       city: response.data.name,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
@@ -120,7 +120,11 @@ export default function Maintemp(props) {
                 />
               </div>
               <div className="col-8 ">
-                <TempandUnits celsiustempcurrent={weatherData.currenttemp} />
+                <TempandUnits
+                  celsiustempcurrent={weatherData.currenttemp}
+                  unit={props.unit}
+                  setUnit={props.setUnit}
+                />
               </div>
             </div>
           </h3>
@@ -130,7 +134,7 @@ export default function Maintemp(props) {
           coord={weatherData.coord}
         />
         <hr />
-        <Forecastsection coord={weatherData.coord} />
+        <Forecastsection coord={weatherData.coord} unit={props.unit} />
         <hr />
       </div>
     );

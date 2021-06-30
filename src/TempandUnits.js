@@ -1,28 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function TempandUnits(props) {
-  const [unit, setUnit] = useState("setcelsius");
-
   function changeFahrenheit(event) {
     event.preventDefault();
-    setUnit("setfahrenheit");
+    props.setUnit("setfahrenheit");
   }
 
   function changeCelsius(event) {
     event.preventDefault();
-    setUnit("setcelsius");
+    props.setUnit("setcelsius");
   }
 
   function fahrenheitformula() {
     return Math.round((props.celsiustempcurrent * 9) / 5 + 32);
   }
 
-  if (unit === "setcelsius") {
+  if (props.unit === "setcelsius") {
     return (
       <div className="row">
         <div className="col-6 d-flex justify-content-center">
           <span className="todaytemp" id="currenttemp">
-            {props.celsiustempcurrent}
+            {Math.round(props.celsiustempcurrent)}
           </span>
         </div>
         <div className="col-6 d-flex">
