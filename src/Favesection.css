@@ -6,6 +6,10 @@
   color: #989393;
 }
 
+.favecityblock {
+  padding: 4px;
+}
+
 .favecity {
   font-size: 20px;
   text-transform: uppercase;

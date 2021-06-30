@@ -74,7 +74,7 @@ export default function Maintemp(props) {
                 type="text"
                 className="form-control"
                 id="searchcountryinput"
-                placeholder="City"
+                placeholder="Enter a City"
                 required
                 autoFocus="on"
                 autoComplete="off"
